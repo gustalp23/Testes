@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#060a19">
+<meta name="description" content="Uma experiência futurista para a contagem regressiva do Natal de 2026.">
+<title>NOVA — Contagem para 25.12.2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--white:#f4f8ff;--silver:#ccd8e8;--blue:#3d8cff;--magenta:#eb3bdb}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;background:#050915;color:var(--white);font-family:Outfit,Arial,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-2;background:radial-gradient(ellipse at 12% 20%,#1642a351,transparent 39%),radial-gradient(ellipse at 85% 65%,#ad178c45,transparent 36%),linear-gradient(145deg,#050816,#0d1730 54%,#070713)}
+body:after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.18;background-image:linear-gradient(#73a5fd38 1px,transparent 1px),linear-gradient(90deg,#73a5fd38 1px,transparent 1px);background-size:64px 64px;mask-image:linear-gradient(to bottom,black,transparent 85%)}
+header{max-width:1200px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:30px 32px;gap:20px}
+.brand{font-family:Orbitron,sans-serif;font-size:20px;letter-spacing:.32em;font-weight:800;background:linear-gradient(120deg,#fff,#899dbb,#fff);background-clip:text;color:transparent}
+.status{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#b4c6e0;display:flex;gap:10px;align-items:center}.dot{width:7px;height:7px;background:#5be9e7;border-radius:50%;box-shadow:0 0 13px #5be9e7}
+main{max-width:1200px;margin:auto;padding:80px 28px 120px;text-align:center}
+.eyebrow{display:inline-flex;gap:12px;align-items:center;border:1px solid #a9c7ff42;background:#e5edff0a;backdrop-filter:blur(12px);border-radius:30px;padding:12px 21px;color:#cbd6ee;font-size:11px;letter-spacing:.23em;font-weight:600}
+.eyebrow span{width:23px;height:1px;background:#ed67e2}
+h1{margin:34px auto 18px;font-family:Orbitron,sans-serif;font-size:clamp(3.5rem,10vw,8.8rem);line-height:1.08;letter-spacing:-.065em;font-weight:800;background:linear-gradient(180deg,#ffffff 3%,#e2e9f5 32%,#94a7c2 64%,#eff7ff 87%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 10px 35px #bed8ff24)}
+h1 em{font-style:normal;display:block;letter-spacing:.18em;font-size:clamp(.8rem,2vw,1.6rem);line-height:1.8;background:linear-gradient(90deg,#4a9dff,#d8e6ff,#f165dc);background-clip:text;color:transparent;margin-top:12px}
+.lead{max-width:680px;margin:28px auto 45px;font-size:clamp(16px,2vw,19px);line-height:1.8;font-weight:300;color:#bed0e7}
+.date{font-family:Orbitron,sans-serif;font-size:12px;letter-spacing:.28em;color:#aabdd8;text-transform:uppercase;margin:0 0 18px}
+.countdown{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));max-width:900px;margin:0 auto;gap:16px}
+.unit{position:relative;padding:28px 10px 22px;border:1px solid #a9c7ff40;border-radius:18px;overflow:hidden;background:linear-gradient(150deg,#d8e6ff14,#5978ca0d 60%,#d824b512);box-shadow:inset 0 1px #ffffff20,0 18px 50px #0007;backdrop-filter:blur(16px)}
+.unit:before{content:"";position:absolute;top:0;left:16%;right:16%;height:2px;background:linear-gradient(90deg,transparent,#7aafff,#f374e8,transparent);box-shadow:0 0 18px #b773ff}
+.num{font-family:Orbitron,sans-serif;font-weight:700;letter-spacing:-.04em;font-size:clamp(2rem,5.8vw,4.5rem);font-variant-numeric:tabular-nums}
+.lab{font-size:10px;letter-spacing:.24em;color:#aebdd7;text-transform:uppercase;margin-top:12px}
+.note{margin:22px auto 0;min-height:22px;font-size:13px;color:#94aac9;letter-spacing:.06em}
+.panel{max-width:930px;margin:78px auto 0;display:grid;grid-template-columns:1fr 2fr;text-align:left;border:1px solid #93afff36;border-radius:22px;background:linear-gradient(125deg,#a5bcf412,#09142c88);overflow:hidden;box-shadow:0 25px 85px #0005}
+.panel-side{padding:40px 30px;background:linear-gradient(150deg,#2954b83b,#a7279338);border-right:1px solid #93afff2a}
+.panel-side .tiny{font-size:10px;letter-spacing:.26em;color:#cfdbfa}.panel-side h2{font:600 25px/1.4 Orbitron,sans-serif;margin:20px 0 0;background:linear-gradient(100deg,#dceaff,#a7bcd4);background-clip:text;color:transparent}
+.panel-copy{padding:42px 44px;color:#bfcee6;font-size:17px;font-weight:300;line-height:1.85}.panel-copy strong{color:white;font-weight:500}
+footer{text-align:center;padding:0 20px 40px;color:#71839e;font:10px Orbitron,sans-serif;letter-spacing:.2em}
+@media(max-width:650px){header{padding:24px 20px}main{padding:65px 18px 70px}.status{font-size:9px;letter-spacing:.08em}h1{letter-spacing:-.075em}.countdown{gap:9px}.unit{border-radius:12px;padding:23px 3px 18px}.lab{font-size:8px;letter-spacing:.06em}.panel{grid-template-columns:1fr;margin-top:58px}.panel-side{padding:25px;border-right:0;border-bottom:1px solid #93afff2a}.panel-copy{padding:25px;font-size:16px}}
+@media(prefers-reduced-motion:no-preference){.eyebrow{animation:appear .7s ease both}h1{animation:appear .95s .1s ease both}.lead{animation:appear .95s .2s ease both}.countdown{animation:appear .95s .3s ease both}@keyframes appear{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}}
+</style>
+</head>
+<body>
+<header><div class="brand" aria-label="Nova">NOVA<span style="color:#e858df">.</span></div><div class="status"><span class="dot"></span> EXPERIÊNCIA DIGITAL / 2026</div></header>
+<main>
+<div class="eyebrow"><span></span> O FUTURO TEM UMA DATA <span></span></div>
+<h1>BEYOND<em>THE FUTURE IS NOW</em></h1>
+<p class="lead">Uma nova dimensão está prestes a começar. Entre o brilho do amanhã e a energia do presente, cada segundo nos aproxima de um momento extraordinário.</p>
+<p class="date">CONTAGEM REGRESSIVA · 25 DE DEZEMBRO DE 2026</p>
+<section class="countdown" aria-label="Contagem regressiva até 25 de dezembro de 2026">
+<div class="unit"><div class="num" id="days">--</div><div class="lab">Dias</div></div>
+<div class="unit"><div class="num" id="hours">--</div><div class="lab">Horas</div></div>
+<div class="unit"><div class="num" id="minutes">--</div><div class="lab">Minutos</div></div>
+<div class="unit"><div class="num" id="seconds">--</div><div class="lab">Segundos</div></div>
+</section>
+<p class="note" id="message" aria-live="polite">O tempo está em movimento.</p>
+<section class="panel"><div class="panel-side"><div class="tiny">01 / MANIFESTO</div><h2>UM NOVO<br>HORIZONTE.</h2></div><div class="panel-copy">O futuro não é apenas um destino. <strong>É a soma de tudo o que ousamos imaginar.</strong> Ideias se transformam em possibilidades, a tecnologia encontra a criatividade e o extraordinário deixa de ser distante. <strong>O próximo capítulo começa agora.</strong></div></section>
+</main>
+<footer>NOVA EXPERIENCE © 2026 &nbsp; / &nbsp; DESIGNED FOR TOMORROW</footer>
+<script>
+(function(){
+ const end=Date.parse('2026-12-25T00:00:00-03:00');
+ const ids=['days','hours','minutes','seconds'];
+ const els=ids.map(id=>document.getElementById(id));
+ function tick(){
+ const remaining=Math.max(0,Math.floor((end-Date.now())/1000));
+ const parts=[Math.floor(remaining/86400),Math.floor(remaining%86400/3600),Math.floor(remaining%3600/60),remaining%60];
+ parts.forEach((value,i)=>{els[i].textContent=String(value).padStart(2,'0')});
+ if(remaining===0){document.getElementById('message').textContent='O grande dia chegou. Feliz Natal!';return true;}
+ return false;
+ }
+ if(!tick()){const timer=setInterval(()=>{if(tick())clearInterval(timer)},1000);}
+})();
+</script>
+</body></html>
