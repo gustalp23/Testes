@@ -11,7 +11,7 @@
 <style>
 :root{color-scheme:dark;--white:#f4f8ff;--silver:#ccd8e8;--blue:#3d8cff;--magenta:#eb3bdb}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;background:#050915;color:var(--white);font-family:Outfit,Arial,sans-serif;overflow-x:hidden}
-body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-2;background:radial-gradient(ellipse at 8% 28%,#066cffe0,transparent 48%),radial-gradient(ellipse at 95% 45%,#ed00bcbf,transparent 48%),radial-gradient(ellipse at 55% 100%,#b217e880,transparent 50%),linear-gradient(125deg,#04112c,#10104a 49%,#260020)}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-2;background:radial-gradient(ellipse at 20% 18%,#167cffa8,transparent 47%),radial-gradient(ellipse at 72% 26%,#ee00cc9c,transparent 45%),radial-gradient(ellipse at 42% 67%,#8b26ff8c,transparent 45%),radial-gradient(ellipse at 90% 88%,#167cffa0,transparent 37%),radial-gradient(ellipse at 8% 92%,#e600b08a,transparent 40%),linear-gradient(145deg,#030c27,#0c1240 51%,#18072d)}
 body:after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.32;background-image:linear-gradient(#73a5fd38 1px,transparent 1px),linear-gradient(90deg,#73a5fd38 1px,transparent 1px);background-size:64px 64px;mask-image:linear-gradient(to bottom,black,transparent 85%)}
 header{max-width:1200px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:30px 32px;gap:20px}
 .brand{font-family:Orbitron,sans-serif;font-size:20px;letter-spacing:.32em;font-weight:800;background:linear-gradient(120deg,#fff,#899dbb,#fff);background-clip:text;color:transparent}
@@ -24,13 +24,13 @@ h1 em{font-style:normal;display:block;letter-spacing:.18em;font-size:clamp(.8rem
 .lead{max-width:680px;margin:28px auto 45px;font-size:clamp(16px,2vw,19px);line-height:1.8;font-weight:300;color:#bed0e7}
 .date{font-family:Orbitron,sans-serif;font-size:12px;letter-spacing:.28em;color:#aabdd8;text-transform:uppercase;margin:0 0 18px}
 .countdown{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));max-width:900px;margin:0 auto;gap:16px}
-.unit{position:relative;padding:28px 10px 22px;border:1px solid #fa75e78c;border-radius:18px;overflow:hidden;background:linear-gradient(140deg,#378dff4d,#d4e7ff17 45%,#e400b552);box-shadow:inset 0 1px #ffffff61,0 15px 60px #d000a955,0 0 32px #1579ff45;backdrop-filter:blur(16px)}
+.unit{position:relative;padding:28px 10px 22px;border:1px solid #fa75e78c;border-radius:18px;overflow:hidden;background:linear-gradient(135deg,#248dff60 0%,#cf5bff38 51%,#fa14bd55 100%);box-shadow:inset 0 1px #ffffff61,-12px 12px 48px #167bff54,12px 15px 48px #d800b356;backdrop-filter:blur(16px)}
 .unit:before{content:"";position:absolute;top:0;left:16%;right:16%;height:2px;background:linear-gradient(90deg,transparent,#1bafff,#ff27dc,transparent);box-shadow:0 0 18px #b773ff}
 .num{font-family:Orbitron,sans-serif;font-weight:700;letter-spacing:-.04em;font-size:clamp(2rem,5.8vw,4.5rem);font-variant-numeric:tabular-nums}
 .lab{font-size:10px;letter-spacing:.24em;color:#aebdd7;text-transform:uppercase;margin-top:12px}
 .note{margin:22px auto 0;min-height:22px;font-size:13px;color:#94aac9;letter-spacing:.06em}
-.panel{max-width:930px;margin:78px auto 0;display:grid;grid-template-columns:1fr 2fr;text-align:left;border:1px solid #ed69ed99;border-radius:22px;background:linear-gradient(125deg,#1389ff36,#17194bce 45%,#e100b142);overflow:hidden;box-shadow:0 25px 85px #0005}
-.panel-side{padding:40px 30px;background:linear-gradient(150deg,#037dffc2,#cb0ab8a6);border-right:1px solid #93afff2a}
+.panel{max-width:930px;margin:78px auto 0;display:grid;grid-template-columns:1fr 2fr;text-align:left;border:1px solid #ed69ed99;border-radius:22px;background:linear-gradient(115deg,#1389ff66,#512dad86 50%,#e100b166);overflow:hidden;box-shadow:0 25px 85px #0005}
+.panel-side{padding:40px 30px;background:linear-gradient(130deg,#007cffd9,#8835f9c9 50%,#ed00c4cd);border-right:1px solid #93afff2a}
 .panel-side .tiny{font-size:10px;letter-spacing:.26em;color:#cfdbfa}.panel-side h2{font:600 25px/1.4 Orbitron,sans-serif;margin:20px 0 0;background:linear-gradient(100deg,#dceaff,#a7bcd4);background-clip:text;color:transparent}
 .panel-copy{padding:42px 44px;color:#bfcee6;font-size:17px;font-weight:300;line-height:1.85}.panel-copy strong{color:white;font-weight:500}
 footer{text-align:center;padding:0 20px 40px;color:#71839e;font:10px Orbitron,sans-serif;letter-spacing:.2em}
