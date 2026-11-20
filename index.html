@@ -2,181 +2,39 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#101827">
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="description" content="Página temporariamente indisponível para manutenção.">
-  <title>Em manutenção</title>
-  <style>
-    :root {
-      color-scheme: dark;
-      --background: #0b1220;
-      --panel: rgba(20, 32, 49, .78);
-      --border: rgba(190, 213, 238, .14);
-      --white: #f5f8ff;
-      --muted: #a8b7c9;
-      --accent: #80d3e4;
-    }
-    *, *::before, *::after { box-sizing: border-box; }
-    html { min-height: 100%; }
-    body {
-      margin: 0;
-      min-height: 100vh;
-      min-height: 100dvh;
-      display: grid;
-      place-items: center;
-      overflow-x: hidden;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-      color: var(--white);
-      background:
-        radial-gradient(ellipse at 12% 13%, rgba(40, 109, 139, .30), transparent 42%),
-        radial-gradient(ellipse at 94% 88%, rgba(45, 75, 121, .30), transparent 48%),
-        linear-gradient(145deg, #0b1220 0%, #121e2d 55%, #0c1523 100%);
-    }
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      background-image: linear-gradient(rgba(230, 246, 255, .025) 1px, transparent 1px),
-                        linear-gradient(90deg, rgba(230, 246, 255, .025) 1px, transparent 1px);
-      background-size: 56px 56px;
-      mask-image: linear-gradient(to bottom, rgba(0, 0, 0, .85), transparent 90%);
-    }
-    main {
-      position: relative;
-      z-index: 1;
-      width: min(100% - 36px, 750px);
-      margin: 55px 0;
-      padding: clamp(34px, 7vw, 72px);
-      text-align: center;
-      border: 1px solid var(--border);
-      border-radius: 28px;
-      background: var(--panel);
-      box-shadow: 0 30px 100px rgba(0, 0, 0, .26), inset 0 1px rgba(255, 255, 255, .05);
-      backdrop-filter: blur(22px);
-    }
-    .symbol {
-      position: relative;
-      display: grid;
-      place-items: center;
-      width: 106px;
-      height: 106px;
-      margin: 0 auto 36px;
-      border-radius: 28px;
-      background: linear-gradient(145deg, rgba(124, 211, 228, .17), rgba(124, 211, 228, .045));
-      border: 1px solid rgba(134, 221, 237, .23);
-      box-shadow: 0 10px 44px rgba(66, 167, 198, .11);
-    }
-    .symbol::after {
-      content: "";
-      position: absolute;
-      inset: -11px;
-      border: 1px solid rgba(134, 221, 237, .12);
-      border-radius: 37px;
-    }
-    .symbol svg { width: 54px; height: 54px; stroke: #9ae1ed; }
-    .eyebrow {
-      margin: 0 0 18px;
-      color: #a7e3ee;
-      text-transform: uppercase;
-      font-size: 11px;
-      font-weight: 750;
-      letter-spacing: .24em;
-    }
-    h1 {
-      margin: 0 auto 23px;
-      max-width: 620px;
-      font-size: clamp(38px, 6vw, 62px);
-      font-weight: 750;
-      letter-spacing: -.055em;
-      line-height: 1.1;
-    }
-    .description {
-      max-width: 540px;
-      margin: 0 auto;
-      font-size: clamp(15px, 2.2vw, 18px);
-      line-height: 1.8;
-      font-weight: 400;
-      color: var(--muted);
-    }
-    .divider {
-      width: 58px;
-      height: 2px;
-      margin: 35px auto;
-      background: linear-gradient(90deg, transparent, var(--accent), transparent);
-    }
-    .status {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 15px;
-      border: 1px solid rgba(134, 221, 237, .19);
-      border-radius: 99px;
-      color: #c1d0dc;
-      background: rgba(127, 211, 228, .05);
-      font-size: 12px;
-      font-weight: 600;
-    }
-    .status-dot {
-      width: 8px;
-      height: 8px;
-      flex: 0 0 8px;
-      background: #8ddcda;
-      border-radius: 50%;
-      box-shadow: 0 0 0 4px rgba(141, 220, 218, .13);
-    }
-    .action {
-      display: block;
-      margin: 30px auto 0;
-      padding: 15px 25px;
-      max-width: 215px;
-      min-height: 49px;
-      border: 1px solid rgba(190, 228, 235, .28);
-      border-radius: 12px;
-      background: #d3eff4;
-      color: #152e3c;
-      font-size: 13px;
-      font-weight: 750;
-      text-decoration: none;
-      cursor: pointer;
-      transition: background .2s ease, transform .2s ease;
-    }
-    .action:hover { background: #edfdff; transform: translateY(-2px); }
-    .action:focus-visible { outline: 3px solid #a8e7ef; outline-offset: 4px; }
-    .footnote {
-      margin: 21px auto 0;
-      color: #879bae;
-      font-size: 12px;
-      line-height: 1.65;
-    }
-    @media (max-width: 520px) {
-      main { border-radius: 20px; padding: 38px 24px 44px; }
-      .symbol { width: 86px; height: 86px; margin-bottom: 28px; border-radius: 23px; }
-      .symbol::after { border-radius: 31px; }
-      .symbol svg { width: 45px; height: 45px; }
-      h1 { font-size: 39px; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { transition: none !important; }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Projeto Integrador de Programação Web I: Central de Utilidades.">
+  <title>Central de Utilidades | Entrega 1</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <main aria-labelledby="page-title">
-    <div class="symbol" aria-hidden="true">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M12 2.75l1.33 2.02 2.38.35.65 2.32 2.14 1.1-.46 2.37 1.24 2.06-1.44 1.93.22 2.41-2.24.88-.88 2.24-2.41-.22L10.6 21.7l-2.06-1.24-2.37.46-1.1-2.14-2.32-.65-.35-2.38L.4 14.42l.62-2.33-.62-2.33 2.02-1.33.35-2.38 2.32-.65 1.1-2.14 2.37.46 2.06-1.24 1.38.27Z" transform="translate(2.3 1.2) scale(.79)"/>
-        <circle cx="12" cy="12" r="3.2"/>
-      </svg>
+  <header class="topo">
+    <div class="container barra">
+      <a class="marca" href="#inicio"><span class="marca-icone">▦</span> Central de Utilidades</a>
+      <nav aria-label="Navegação principal"><a href="#inicio">Início</a><a href="#ferramentas">Ferramentas</a><a href="#sobre">Sobre</a></nav>
     </div>
-    <p class="eyebrow">Aviso de manutenção</p>
-    <h1 id="page-title">Estamos realizando melhorias.</h1>
-    <p class="description">Esta página está temporariamente indisponível enquanto realizamos alguns ajustes. Agradecemos a compreensão e esperamos receber você novamente em breve.</p>
-    <div class="divider" aria-hidden="true"></div>
-    <div class="status" role="status"><span class="status-dot" aria-hidden="true"></span> Manutenção em andamento</div>
-    <button class="action" type="button" onclick="window.location.reload()">Tentar novamente ↗</button>
-    <p class="footnote">Se a página continuar indisponível, tente acessá-la mais tarde.</p>
+  </header>
+  <main id="inicio" class="container">
+    <section class="hero">
+      <div><span class="etiqueta">PROJETO INTEGRADOR · ENTREGA 1</span>
+      <h1>Facilite seus cálculos do dia a dia.</h1>
+      <p>Quatro ferramentas simples para economizar, planejar compras, simular investimentos e dividir despesas.</p>
+      <a class="botao hero-botao" href="#ferramentas">Explorar ferramentas ↓</a></div>
+      <div class="hero-ilustracao" aria-hidden="true"><span>⌗</span><strong>R$</strong><span>＋</span><span>％</span></div>
+    </section>
+    <section id="ferramentas" class="secao">
+      <div class="secao-cabecalho"><div><span class="etiqueta">ESCOLHA UMA FERRAMENTA</span><h2>O que você deseja calcular?</h2></div><p>Clique em iniciar e responda às perguntas que aparecerem.</p></div>
+      <div class="grade">
+        <article class="cartao"><div class="icone azul">%</div><h3>Calculadora de Descontos</h3><p>Descubra quanto você economiza e qual será o preço final de sua compra.</p><button type="button" onclick="executarFerramenta(1)">Calcular desconto <span>→</span></button></article>
+        <article class="cartao"><div class="icone verde">▤</div><h3>Calculadora de Parcelas</h3><p>Divida o valor da sua compra em parcelas iguais, sem juros.</p><button type="button" onclick="executarFerramenta(2)">Calcular parcelas <span>→</span></button></article>
+        <article class="cartao"><div class="icone roxo">▥</div><h3>Simulador de Investimentos</h3><p>Simule a evolução de seu dinheiro com rendimentos e aportes mensais.</p><button type="button" onclick="executarFerramenta(3)">Simular investimento <span>→</span></button></article>
+        <article class="cartao"><div class="icone laranja">♧</div><h3>Divisor de Despesas</h3><p>Some diferentes gastos e descubra quanto cada pessoa deve pagar.</p><button type="button" onclick="executarFerramenta(4)">Dividir despesas <span>→</span></button></article>
+      </div>
+      <p class="observacao">Nesta primeira etapa, os dados são informados por janelas do navegador (prompt) e os resultados aparecem em alertas. Os formulários serão implementados em uma etapa futura.</p>
+    </section>
+    <section id="sobre" class="sobre"><span class="etiqueta">SOBRE O PROJETO</span><h2>Aprendendo JavaScript na prática</h2><p>Projeto Integrador da disciplina Programação Web I, do curso Técnico em Informática para Internet — IF Sudeste MG, Campus Barbacena. A Entrega 1 trabalha variáveis, operadores, condicionais, funções e estruturas de repetição.</p><p>Desenvolvido por Gustavo Lourenço de Paula · 2026.</p></section>
   </main>
+  <footer>© 2026 · Central de Utilidades · Projeto Integrador — Entrega 1</footer>
 </body>
 </html>
